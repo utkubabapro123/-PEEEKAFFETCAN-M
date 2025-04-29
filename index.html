@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İpek nolur affet cok ozur dilerim</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-danger {
+            background-color: #f44336;
+        }
+        #no-btn {
+            position: relative;
+            transition: all 0.4s ease;
+        }
+        img {
+            max-width: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>İpek nolur affet</h2>
+    <img src="kedi.jpg" alt="Affet Kedisi">
+    <br>
+    <button class="btn" onclick="affettimTiklandi()">Affettim</button>
+    <button id="no-btn" class="btn btn-danger" onclick="hayirTiklandi()">yok</button>
+
+    <script>
+        function affettimTiklandi() {
+            alert("YPİİİİİİİİİİİİİİİİİİİİİİİİİ");
+            window.location.href = "https://www.youtube.com/watch?v=8Go6dHuylyM";
+        }
+
+        function hayirTiklandi() {
+            const noBtn = document.getElementById("no-btn");
+            const maxWidth = window.innerWidth - 150;
+            const maxHeight = window.innerHeight - 50;
+            const yeniX = Math.random() * maxWidth;
+            const yeniY = Math.random() * maxHeight;
+            noBtn.style.position = "absolute";
+            noBtn.style.left = `${yeniX}px`;
+            noBtn.style.top = `${yeniY}px`;
+            noBtn.textContent = "Dalga.mı.geçiyorsun.canim";
+        }
+    </script>
+</body>
+</html>
