@@ -41,8 +41,11 @@
     <button class="btn" onclick="affettimTiklandi()">Affettim</button>
     <button id="no-btn" class="btn btn-danger" onclick="hayirTiklandi()">yok</button>
 
+    <audio id="ypiSes" src="ypi.mp3" preload="auto"></audio>
+
     <script>
         function affettimTiklandi() {
+            document.getElementById("ypiSes").play(); 
             alert("YPİİİİİİİİİİİİİİİİİİİİİİİİİ");
             window.location.href = "https://www.youtube.com/watch?v=8Go6dHuylyM";
         }
